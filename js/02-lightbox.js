@@ -18,15 +18,8 @@ const galleryEl = ({ preview, original, description }) => {
 
 //   
   
-  galleryArr.insertAdjacentHTML("beforeend", galleryList)
+  galleryArr.insertAdjacentHTML("beforeend", galleryList);
 
-  galleryArr.addEventListener('click', selectedGalleryEl);
+const lightbox = new SimpleLightbox('.gallery a', {captionData: 'alt', captionPosition: 'bottom', captionDelay: 250});
 
-  function selectedGalleryEl(event)  {
-    event.preventDefault();
-    if (event.target.nodeName !== 'IMG') {
-     return
-    } 
-    const lightbox = new SimpleLightbox('.gallery a', {captionData: 'alt', captionPosition: 'bottom', captionDelay: 250});
-}
 
